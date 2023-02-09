@@ -1,26 +1,33 @@
-const display1EL = document.querySelector('.display-1');
-const display2EL = document.querySelector('.display-2');
-const tempResultEL = document.querySelector('.temp-result');
-const numbersEL = document.querySelectorAll('.number');
-const operationEL = document.querySelectorAll('.operation');
-const equalEL = document.querySelector('.equal');
-const clearEL = document.querySelector('.all-clear');
-const clearLastEL = document.querySelector('.last-entity-clear');
+class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement;
+        this.currentOperandTextElement = currentOperandTextElement;
+    }
 
-let dis1Num = '';
-let dis2Num = '';
-let result = null;
-let lastOperation = '';
-let haveDot = false;
+    clear(){
 
-numbersEL.forEach(number => {
-    number.addEventListener('click', (e) =>{
-        if (e.target.innerText === '.' && !haveDot){
-            haveDot = true;
-        } else if (e.target.innerText === '.' && haveDot){
-            return;
-        }
-        dis2Num += e.target.innerText;
-        display2EL.innerText = dis2Num;
-    })
-})
+    }
+
+    delete(){
+
+    }
+
+    appendNumber(){
+
+    }
+
+
+}
+
+const numbersButton = document.querySelectorAll('[data-number]');
+const operationButton = document.querySelectorAll('[data-operation]');
+const equalsButton = document.querySelector('[data-equals]');
+const deleteButton = document.querySelector('[data-delete]');
+const allClearButton = document.querySelector('[data-all-clear]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
+
+
+
+
+
